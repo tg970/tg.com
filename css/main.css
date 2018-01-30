@@ -3,6 +3,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-color: #07282D;
 }
 
 /* font-family: 'Cabin', sans-serif; */
@@ -11,7 +12,7 @@ body {
 .bodywrapper {
   width: 99%;
   height: 100vh;
-  padding-top: 2em;
+  padding-top: 1em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,14 +29,14 @@ body {
 }
 
 .content {
+  margin-top: 1em;
   font-family: 'Open Sans', sans-serif;
   max-width: 75%;
   max-height: 100%;
-  text-shadow:
-            -5px 5px 10px #FEFEFE,
-            0px 4px 5px #FEFEFE,
-            4px 4px 5px #FEFEFE,
-            3px -1px 5px #FEFEFE;
+  background-color: #fff;
+  border-radius: .25em;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 .contentSub {
@@ -45,15 +46,33 @@ body {
 
 .resumeImg{
   max-width: 100%;
+  max-height: 100%;
 }
-.project{
+.project, .sites{
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.projectLink {
+  max-width: 100%;
+}
+
 .projectImg{
-  max-width: 80%;
-  max-height: 70px;
+  max-width: 100%;
+  max-height: 3em;
+}
+
+.site{
+  color: black;
+  text-decoration: none;
+}
+
+.site:hover{
+  color: blue;
+}
+
+a {
+  padding: 0;
 }

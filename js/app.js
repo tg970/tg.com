@@ -30,7 +30,7 @@ const unShowDiv = (event) => {
 }
 
 const prevent = (event) => {
-  event.preventDefault();
+  event.stopPropagation();
 }
 
 
