@@ -12,25 +12,31 @@ const hideOthers = (id) => {
 }
 
 const showDiv = (event) => {
-   //console.log('showNav firing');
-   let $item = $(event.currentTarget).children();
-   $item.show(`slow`)
-   let id = $(event.currentTarget).attr('id')
-   hideOthers(id)
-   $(event.currentTarget).off()
-   $(event.currentTarget).on('click',unShowDiv)
+  //console.log('showNav firing');
+  let $item = $(event.currentTarget).children();
+  $item.show(`slow`)
+  let id = $(event.currentTarget).attr('id')
+  hideOthers(id)
+  $(event.currentTarget).off()
+  $(event.currentTarget).on('click',unShowDiv)
 }
 
 const unShowDiv = (event) => {
-   let $item = $(event.currentTarget).children();
-   $item.hide('slow')
-   $(event.currentTarget).off()
-   $(event.currentTarget).on('click',showDiv)
+  console.log($(event.currentTarget).attr('class'));
+  let $item = $(event.currentTarget).children();
+  $item.hide('slow')
+  $(event.currentTarget).off()
+  $(event.currentTarget).on('click',showDiv)
+}
+
+const prevent = (event) => {
+  event.preventDefault();
 }
 
 
 $(() => {
 
 $('.content').on('click', showDiv)
+$('.projectImg').on('click', prevent)
 
 })
