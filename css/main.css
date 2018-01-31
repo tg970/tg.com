@@ -76,3 +76,11 @@ body {
 a {
   padding: 0;
 }
+
+.nolink {
+  text-decoration: none;
+  color: black;
+}
+.nolink:hover{
+  color:blue;
+}
